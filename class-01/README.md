@@ -1,5 +1,11 @@
 # React and Component-Based Architecture
 
+## In Class Takeaways
+
+- [Prework Review Replit - Arrow Functions and Classes](https://replit.com/@arpatterson31/Class301d90-Prework-Review#index.js)
+- [forEach Replit](https://replit.com/@arpatterson31/Class-301d93-forEach#index.js)
+- [In Class Demo](inclass-demo/people-of-301/)
+
 ## Overview
 
 Today we will be covering some new topics and reviewing concepts you should already be familiar with.

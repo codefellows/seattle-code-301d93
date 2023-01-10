@@ -1,5 +1,11 @@
 # State and Props
 
+## In Class Takeaways
+
+- [Map and Ternary Replit](https://replit.com/@arpatterson31/Class-301d93-Map#index.js)
+- [In Class Demo](inclass-demo/people-of-301/)
+- [State Whiteboard](whiteboards/state-wb.png)
+
 ## Overview
 
 Today's class will focus on passing information as `props` from a parent component into a child component. We will also cover the concept of `state` and how individual components can hold state.

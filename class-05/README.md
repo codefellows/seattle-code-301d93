@@ -1,5 +1,11 @@
 # Class 5: Putting it all together
 
+## In class Takeaways
+
+- [Reduce Replit](https://replit.com/@arpatterson31/Class-301d93-Reduce#index.js)
+- [In Class demo](inclass-demo/conditional-rendering/)
+- [WRRC Whiteboard](whiteboard/wrrc-wb.png)
+
 ## Overview
 
 Today we will use the skills we learned over the week to build a new application: city explorer! Your lab will be to take React starter code and turn it into a beautiful portfolio.

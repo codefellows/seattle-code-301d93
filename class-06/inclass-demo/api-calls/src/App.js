@@ -15,20 +15,22 @@ class App extends React.Component{
     }
   }
 
+  // *** GET POKEMON DATA ***
+  handleGetPokemon =  async (e) => {
+    e.preventDefault()
+    // TODO: make a call out to the Pokemon API - Axios
+    let pokemonData = await axios.get('https://pokeapi.co/api/v2/pokemon/');
 
-  // handleGetPokemon =  async (e) => {
-  //   e.preventDefault()
-  //   // TODO: make a call out to the Pokemon API - Axios
-  //   let pokemonData = await axios.get('https://pokeapi.co/api/v2/pokemon/');
+    console.log(pokemonData.data.results);
 
-  //   console.log(pokemonData.data.results);
+    // TODO: setState with the data I get back
+      this.setState({
+        pokemonData: pokemonData.data.results
+      });
 
-  //   // TODO: setState with the data I get back
-  //     this.setState({
-  //       pokemonData: pokemonData.data.results
-  //     });
-    
-  // }
+  }
+
+  // *** CITY DATA DEMO HANDLERS ***
 
   handleInput = (e) => {
     this.setState({
@@ -37,7 +39,7 @@ class App extends React.Component{
   }
 
   // async/await - handles our asynchronous code
-  // try/catch - handle our errors
+  // try/catch - handle our PROMISE - resolves a successful promise or handles our errors on a rejected promise
 
   getCityData = async (e) => {
     e.preventDefault();
@@ -45,7 +47,7 @@ class App extends React.Component{
     try {
       // TODO: need use axios to hit LocationIQ - async/await
       let url = `https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`
-  
+
       console.log(url);
       let cityDataFromAxios = await axios.get(url)
       // console.log(cityDataFromAxios.data)
@@ -54,7 +56,11 @@ class App extends React.Component{
         cityData: cityDataFromAxios.data[0],
         error: false
       })
-      
+
+
+      //  *** FOR YOUR LAB YOU WILL NEED TO GET A MAP IMAGE SRC. Example: ***
+    // ** `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=47.6038321,-122.3300624&zoom=10`
+
     } catch (error) {
       console.log(error);
       this.setState({
@@ -62,12 +68,6 @@ class App extends React.Component{
         errorMessage: error.message
       })
     }
-
-
-
-
-
-    
 
   }
 
@@ -91,7 +91,7 @@ class App extends React.Component{
           ? <p>{this.state.errorMessage}</p>
           : <p>{this.state.cityData.display_name}</p>
         }
-        
+
         {/* <form>
           <button onClick={this.handleGetPokemon}>Gotta catch them all!</button>
         </form>

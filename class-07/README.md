@@ -1,5 +1,11 @@
 # Express Servers
 
+## IN CLASS TAKEAWAYS AND NOTES
+
+- [IN CLASS DEMO - BACKEND](inclass-demo/backend-server/)
+- [IN CLASS DEMO - FRONT END](inclass-demo/frontend-pets/)
+- [DEPLOYMENT INSTRUCTIONS](DEPLOYMENT.MD)
+
 ## Overview
 
 Today we will build our own custom Express server in Node.js. We will server our front end static files and dive more deeply into the WRRC.

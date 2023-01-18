@@ -1,5 +1,11 @@
 # APIs
 
+## In class notes and takeaways
+
+- [Code Review](code-review/)
+- [Regex Replit](https://replit.com/@arpatterson31/Class-301d93-Regex#index.js)
+- [In Class Demo - Unsplash API](inclass-demo/)
+
 ## Overview
 
 Today we will use our express server to request information from third party APIs to send to the front-end.

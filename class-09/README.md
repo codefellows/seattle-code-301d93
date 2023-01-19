@@ -1,5 +1,10 @@
 # Advanced Topics
 
+## In class takeaways
+
+- [Object Methods Replit](https://replit.com/@arpatterson31/Class-301d93-Object-Methods#index.js)
+- [In Class Demo](inclass-demo/)
+
 ## Overview
 
 Today we will dive a little bit deeper into Express and higher level programming in general, covering the following topics:
@@ -78,7 +83,7 @@ Today we will dive a little bit deeper into Express and higher level programming
 
   module.exports = doSomething
   ```
-  
+
   - OR, it can be written like this
 
   ```javaScript
@@ -116,5 +121,5 @@ Today we will dive a little bit deeper into Express and higher level programming
   doesStuffObject.doSomething();
   doesStuffObject.doSomethingElse();
   ```
-  
+
   1. List of resources to help with lab or if I want to know more:

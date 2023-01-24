@@ -30,17 +30,22 @@ class App extends React.Component {
   }
 
   deleteCats = async (id) => {
-    // TODO: use axios to send the ID to the server on the path param
-    let url = `${process.env.REACT_APP_SERVER}/cats/${id}`
+    try {
+      // TODO: use axios to send the ID to the server on the path param
+      let url = `${process.env.REACT_APP_SERVER}/cats/${id}`
 
-    await axios.delete(url);
+      await axios.delete(url);
 
-    // TODO: update state to remove the deleted cat
-    let updatedCats = this.state.cats.filter(cat => cat._id !== id);
+      // TODO: update state to remove the deleted cat
+      let updatedCats = this.state.cats.filter(cat => cat._id !== id);
 
-    this.setState({
-      cats: updatedCats
-    })
+      this.setState({
+        cats: updatedCats
+      });
+
+    } catch (error) {
+      console.log(error.message)
+    }
   }
 
 
@@ -85,7 +90,7 @@ class App extends React.Component {
 
   // REACT LIFECYCLE METHOD
 
-  componentDidMount(){
+  componentDidMount() {
     this.getCats();
   }
 
@@ -107,7 +112,7 @@ class App extends React.Component {
               />
             </>
           }
-           <Container className="mt-5">
+          <Container className="mt-5">
             <Form onSubmit={this.handleCatSubmit}>
               <Form.Group controlId="name">
                 <Form.Label>Name</Form.Label>
